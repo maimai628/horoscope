@@ -1,0 +1,13 @@
+<%= form_tag ('/main/result/') do |f| %>
+<% # form_tag (main_result_path) do |f| %>
+
+<div class="field">
+何月生まれですか？
+<%= text_field_tag :month %>
+<%= text_field_tag :day %>
+<%= date_select :birthday,'',{:use_month_numbers => true ,:start_year => 1950 ,:end_year => 2014 ,:default => Date.new(1985,01,01)} %>
+</div>
+<div class="actions">
+<%= submit_tag "占う" %>
+</div>
+<% end %>
